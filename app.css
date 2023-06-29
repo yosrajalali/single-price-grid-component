@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--Light-Gray);
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  width: min(85%, 635px);
+  display: grid;
+  color: var(--Light-Gray);
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+.community {
+  background: #fff;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.subscription {
+  background: hsl(179, 92%, 30%);
+}
+
+.why__us {
+  background: var(--Cyan);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.community__title {
+  color: var(--Cyan);
+  font-size: 1.2rem;
+}
+
+.guarantee {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.context {
+  line-height: 1.5;
+  color: var(--Grayish-Blue);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.price__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.per__month {
+  opacity: 0.5;
+}
+
+.subscription__context {
+  font-size: 0.9rem;
+}
+
+.btn {
+  border: 1px solid var(--Bright-Yellow);
+  background: var(--Bright-Yellow);
+  color: var(--Light-Gray);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.why__us__title {
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.subscription__title,
+.why__us__title {
+  font-size: 1rem;
+}
+
+ul {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 38em) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .community {
+    grid-column: 1/-1;
+  }
+  .subscription {
+    border-radius: 0 0 0 0.4rem;
+  }
+  .why__us {
+    border-radius: 0 0 0.4rem 0;
+  }
+  ul {
+    line-height: 1.3;
+  }
+}
